@@ -1,0 +1,70 @@
+all:
+  hosts:
+    ite-mn-1:
+      ansible_host: 10.1.68.41
+      ip: 10.1.68.41
+      access_ip: 10.1.68.41
+    ite-mn-2:
+      ansible_host: 10.1.68.42
+      ip: 10.1.68.42
+      access_ip: 10.1.68.42
+    ite-mn-3:
+      ansible_host: 10.1.68.62
+      ip: 10.1.68.62
+      access_ip: 10.1.68.62
+    ite-wn-1:
+      ansible_host: 10.1.68.43
+      ip: 10.1.68.43
+      access_ip: 10.1.68.43
+    ite-wn-2:
+      ansible_host: 10.1.68.44
+      ip: 10.1.68.44
+      access_ip: 10.1.68.44
+    ite-wn-3:
+      ansible_host: 10.1.68.45
+      ip: 10.1.68.45
+      access_ip: 10.1.68.45
+    ite-wn-4:
+      ansible_host: 10.1.68.46
+      ip: 10.1.68.46
+      access_ip: 10.1.68.46
+    ite-wn-5:
+      ansible_host: 10.1.68.63
+      ip: 10.1.68.63
+      access_ip: 10.1.68.63
+    ite-etcd-node1:
+      ansible_host: 10.1.68.57
+      ip: 10.1.68.57
+      access_ip: 10.1.68.57
+    ite-etcd-node2:
+      ansible_host: 10.1.68.58
+      ip: 10.1.68.58
+      access_ip: 10.1.68.58 
+    ite-etcd-node3:
+      ansible_host: 10.1.68.59
+      ip: 10.1.68.59
+      access_ip: 10.1.68.59
+  children:
+    kube-master:
+      hosts:
+        ite-mn-2:
+        ite-mn-3:
+        ite-mn-1:
+    kube-node:
+      hosts:
+        ite-wn-1:
+        ite-wn-2:
+        ite-wn-3:
+        ite-wn-4:
+        ite-wn-5:
+    etcd:
+      hosts:
+        ite-etcd-node1:
+        ite-etcd-node2:
+        ite-etcd-node3:
+    k8s-cluster:
+      children:
+        kube-master:
+        kube-node:
+    calico-rr:
+      hosts: {}
