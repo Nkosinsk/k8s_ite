@@ -1,4 +1,5 @@
 -=FOR kube version 1.20=-
+![logo](https://i.ibb.co/H4YSNVd/000.jpg)
 
 # Deploy a Production Ready Kubernetes Cluster
 
