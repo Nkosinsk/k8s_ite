@@ -1,14 +1,15 @@
 # Use imutable image tags rather than mutable tags (like ubuntu:18.04)
-FROM ubuntu:bionic-20200807
+FROM ubuntu:22.04@sha256:149d67e29f765f4db62aa52161009e99e389544e25a8f43c8c89d4a445a7ca37
 
-ENV KUBE_VERSION=v1.20.4
+ENV KUBE_VERSION=v1.26.13
 
 RUN mkdir /kubespray
 WORKDIR /kubespray
 RUN apt update -y && \
     apt install -y \
     libssl-dev python3-dev sshpass apt-transport-https jq moreutils \
-    ca-certificates curl gnupg2 software-properties-common python3-pip rsync
+    ca-certificates curl gnupg2 software-properties-common python3-pip rsync \
+    openssh-client vim
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
     add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
