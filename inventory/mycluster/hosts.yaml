@@ -47,9 +47,9 @@ all:
   children:
     kube-master:
       hosts:
+        ite-mn-1:
         ite-mn-2:
         ite-mn-3:
-        ite-mn-1:
     kube-node:
       hosts:
         ite-wn-1:
