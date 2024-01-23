@@ -1,6 +1,8 @@
-ansible==2.9.18
-jinja2==2.11.3
-netaddr==0.7.19
-pbr==5.4.4
-jmespath==0.9.5
-ruamel.yaml==0.16.10
+ansible==8.5.0
+jinja2==3.1.2
+netaddr==0.9.0
+pbr==5.11.1
+jmespath==1.0.1
+ruamel.yaml==0.17.35
+ruamel.yaml.clib==0.2.8
+MarkupSafe==2.1.3
