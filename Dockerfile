@@ -10,11 +10,16 @@ ENV KUBE_VERSION=v1.26.13
 
 RUN mkdir /kubespray
 WORKDIR /kubespray
-RUN apt update -y && \
+
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    apt update -y && \
     apt install -y \
     libssl-dev python3-dev sshpass apt-transport-https jq moreutils \
     ca-certificates curl gnupg2 software-properties-common python3-pip rsync \
     openssh-client vim
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
     add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
