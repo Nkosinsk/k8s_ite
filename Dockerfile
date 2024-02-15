@@ -1,6 +1,11 @@
-# Use imutable image tags rather than mutable tags (like ubuntu:18.04)
+# Use imutable image tags rather than mutable tags (like ubuntu:22.04)
 FROM ubuntu:22.04@sha256:149d67e29f765f4db62aa52161009e99e389544e25a8f43c8c89d4a445a7ca37
 
+
+# Some tools like yamllint need this
+# Pip needs this as well at the moment to install ansible
+# (and potentially other packages)
+# See: https://github.com/pypa/pip/issues/10219
 ENV KUBE_VERSION=v1.26.13
 
 RUN mkdir /kubespray
