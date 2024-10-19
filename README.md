@@ -238,3 +238,4 @@ See also [Network checker](docs/netcheck.md).
 CI/end-to-end tests sponsored by: [CNCF](https://cncf.io), [Packet](https://www.packet.com/), [OVHcloud](https://www.ovhcloud.com/), [ELASTX](https://elastx.se/).
 
 See the [test matrix](docs/test_cases.md) for details.
+## edidet for last k8s
