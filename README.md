@@ -239,3 +239,7 @@ CI/end-to-end tests sponsored by: [CNCF](https://cncf.io), [Packet](https://www.
 
 See the [test matrix](docs/test_cases.md) for details.
 ## edidet for last k8s
+
+## ssl self signed
+- every 1 year need to refactory new SSL for EVERY master-node!
+  
