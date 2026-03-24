@@ -4,6 +4,9 @@
 -=FOR kube version 1.20=-
 # Deploy a Production Ready Kubernetes Cluster
 
+# Proxy path repo
+https://mirrors.aliyun.com/kubernetes/apt/pool/?spm=a2c6h.25603864.0.0.a5d625296NBK8k
+
 ![Kubernetes Logo](https://raw.githubusercontent.com/kubernetes-sigs/kubespray/master/docs/img/kubernetes-logo.png)
 
 If you have questions, check the documentation at [kubespray.io](https://kubespray.io) and join us on the [kubernetes slack](https://kubernetes.slack.com), channel **\#kubespray**.
