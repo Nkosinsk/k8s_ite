@@ -6,7 +6,7 @@
   strategy: linear
   vars:
     mitogen_version: 0.3.5
-    mitogen_url: https://networkgenomics.com/try/mitogen-0.3.5.dev0.tar.gz
+    mitogen_url: https://networkgenomics.com/try/mitogen-0.3.6.dev0.tar.gz
     ansible_connection: local
   tasks:
     - name: Create mitogen plugin dir
